@@ -1,0 +1,51 @@
+{
+  "name": "reactparcel",
+  "version": "1.0.0",
+  "description": "React app with Parcel bundler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.html -o",
+    "build": "parcel build entry.js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier-standard",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i62navpm/reactParcel.git"
+  },
+  "author": "Manuel Navarro Pérez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i62navpm/reactParcel/issues"
+  },
+  "homepage": "https://github.com/i62navpm/reactParcel#readme",
+  "dependencies": {
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-node": "^5.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.13.1",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "parcel-bundler": "^1.3.0",
+    "prettier": "1.9.2",
+    "prettier-standard": "^8.0.0"
+  }
+}
